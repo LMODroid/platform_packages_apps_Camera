@@ -135,7 +135,7 @@ class InAppGallery : AppCompatActivity() {
                     uri.lastPathSegment,
                     "UTF-8"
                 )
-
+                @OptIn(kotlin.ExperimentalStdlibApi::class)
                 val sType = dPath.substring(0, 7).replaceFirstChar {
                     it.uppercase()
                 }

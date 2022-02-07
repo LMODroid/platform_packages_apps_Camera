@@ -1,0 +1,76 @@
+android_library_import {
+    name: "lib-androidx-camera_camera-core",
+    aars: ["androidx-camera-core-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-camera-camera2",
+    aars: ["androidx-camera-camera2-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-camera-lifecycle",
+    aars: ["androidx-camera-lifecycle-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-camera-video",
+    aars: ["androidx-camera-video-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-camera-view",
+    aars: ["androidx-camera-view-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-camera-extensions",
+    aars: ["androidx-camera-extensions-1.1.0-beta01.aar"],
+    sdk_version: "current",
+}
+
+
+android_library_import {
+    name: "lib-androidx-documentfile",
+    aars: ["androidx-documentfile-1.0.0.aar"],
+    sdk_version: "current",
+}
+
+android_library_import {
+    name: "lib-androidx-lifecycle-livedata",
+    aars: ["androidx-lifecycle-livedata-2.1.0.aar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "lib-com.google.zxing",
+    host_supported: true,
+    jars: ["core-3.4.1.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "lib-com.google.common.util.concurrent.ListenableFuture",
+    host_supported: true,
+    jars: ["listenablefuture-1.0.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "lib-androidx-concurrent-futures",
+    host_supported: true,
+    jars: ["androidx-concurrent-futures-1.1.0-beta01.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "lib-androidx-lifecycle-common",
+    host_supported: true,
+    jars: ["androidx-lifecycle-common-2.1.0.jar"],
+    sdk_version: "current",
+}

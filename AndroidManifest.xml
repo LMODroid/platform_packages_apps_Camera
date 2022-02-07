@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.libremobileos.camera">
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:resizeableActivity="false"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App">
+
+
+        <!-- The main activity of the app (supports all modes) -->
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:taskAffinity=".ui.activities.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Helps in supporting double-tap power button (in non-secure/unlocked phone state) -->
+        <activity-alias
+            android:name=".ui.activities.CameraLauncher"
+            android:label="@string/app_name"
+            android:targetActivity=".ui.activities.MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity-alias>
+
+        <!-- The main activity of the app (supports all modes) -->
+        <activity
+            android:name=".ui.activities.SecureMainActivity"
+            android:taskAffinity=".ui.activities.SecureMainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:showOnLockScreen="true"
+            android:excludeFromRecents="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- An extension of the MainActivity that completely enforces video mode
+        https://developer.android.com/reference/android/provider/MediaStore#INTENT_ACTION_VIDEO_CAMERA
+        -->
+        <activity
+            android:name=".ui.activities.VideoOnlyActivity"
+            android:taskAffinity=".ui.activities.VideoOnlyActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+
+        <!-- Capture image that shall be sent to another app
+        https://developer.android.com/reference/android/provider/MediaStore#ACTION_IMAGE_CAPTURE
+        -->
+        <activity
+            android:name=".ui.activities.CaptureActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:visibleToInstantApps="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Capture image to be sent to another app (when the phone is in secure/locked state)
+         https://developer.android.com/reference/android/provider/MediaStore#ACTION_IMAGE_CAPTURE_SECURE
+         -->
+        <activity
+            android:name=".ui.activities.SecureCaptureActivity"
+            android:taskAffinity=".ui.activities.SecureCaptureActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:showOnLockScreen="true"
+            android:excludeFromRecents="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Deals with VideoCapture intent; To record a video to be sent to another app
+        https://developer.android.com/reference/android/provider/MediaStore#ACTION_VIDEO_CAPTURE
+             (No secure video capture intent is present/defined in Android)-->
+        <activity
+            android:name=".ui.activities.VideoCaptureActivity"
+            android:taskAffinity=".ui.activities.VideoCaptureActivity"
+            android:label="@string/video_capture_label"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:screenOrientation="nosensor"
+            android:visibleToInstantApps="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.activities.VideoPlayer"
+            android:theme="@style/OverlayActionBar"
+            android:taskAffinity=".ui.activities.VideoPlayer"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.InAppGallery"
+            android:theme="@style/OverlayActionBar"
+            android:taskAffinity=".ui.activities.InAppGallery"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.activities.MoreSettings"
+            android:theme="@style/OverlayActionBar"
+            android:taskAffinity=".ui.activities.InAppGallery"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
