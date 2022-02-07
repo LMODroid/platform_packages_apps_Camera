@@ -1,2 +1,5 @@
-This is the new GrapheneOS Camera app based on Android's modern CameraX
-library. It replaces AOSP Camera for GrapheneOS.
+This Camera app is based on Android's modern CameraX
+library.
+---------------
+Credit:
+* [**GrapheneOS**](https://github.com/GrapheneOS)

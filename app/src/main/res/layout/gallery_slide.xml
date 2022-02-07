@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <app.grapheneos.camera.ui.ZoomableImageView
+    <com.libremobileos.camera.ui.ZoomableImageView
         android:id="@+id/slide_preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

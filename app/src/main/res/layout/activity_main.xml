@@ -109,7 +109,7 @@
 
             </FrameLayout>
 
-            <app.grapheneos.camera.ui.CountDownTimerUI
+            <com.libremobileos.camera.ui.CountDownTimerUI
                 android:id="@+id/c_timer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -120,12 +120,12 @@
                 android:shadowRadius="1.6"
                 android:textColor="@color/white"/>
 
-            <app.grapheneos.camera.ui.CustomGrid
+            <com.libremobileos.camera.ui.CustomGrid
                 android:id="@+id/preview_grid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <app.grapheneos.camera.ui.QROverlay
+            <com.libremobileos.camera.ui.QROverlay
                 android:id="@+id/qr_overlay"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
@@ -334,7 +334,7 @@
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/zoom_in"/>
 
-            <app.grapheneos.camera.ui.seekbar.ZoomBar
+            <com.libremobileos.camera.ui.seekbar.ZoomBar
                 android:id="@+id/zoom_bar"
                 android:layout_width="wrap_content"
                 android:progressTint="@android:color/transparent"
@@ -381,7 +381,7 @@
                     android:layout_gravity="center"
                     android:background="#99ffffff"/>
 
-                <app.grapheneos.camera.ui.seekbar.ExposureBar
+                <com.libremobileos.camera.ui.seekbar.ExposureBar
                     android:id="@+id/exposure_bar"
                     android:layout_width="wrap_content"
                     android:progressTint="@android:color/transparent"
@@ -402,7 +402,7 @@
 
         </LinearLayout>
 
-        <app.grapheneos.camera.ui.BottomTabLayout
+        <com.libremobileos.camera.ui.BottomTabLayout
             android:id="@+id/camera_mode_tabs"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
@@ -500,7 +500,7 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
-                    <app.grapheneos.camera.ui.QRToggle
+                    <com.libremobileos.camera.ui.QRToggle
                         android:id="@+id/qr_scan_toggle"
                         android:layout_width="@dimen/qr_toggle_button_size"
                         android:layout_height="@dimen/qr_toggle_button_size"
@@ -532,7 +532,7 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
-                    <app.grapheneos.camera.ui.QRToggle
+                    <com.libremobileos.camera.ui.QRToggle
                         android:id="@+id/data_matrix_toggle"
                         android:layout_gravity="center"
                         android:src="@drawable/data_matrix"
@@ -565,7 +565,7 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
-                    <app.grapheneos.camera.ui.QRToggle
+                    <com.libremobileos.camera.ui.QRToggle
                         android:id="@+id/aztec_toggle"
                         android:layout_gravity="center"
                         android:src="@drawable/aztec"
@@ -597,7 +597,7 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
-                <app.grapheneos.camera.ui.QRToggle
+                <com.libremobileos.camera.ui.QRToggle
                     android:id="@+id/pdf417_toggle"
                     android:layout_gravity="center"
                     android:src="@drawable/pdf417"
