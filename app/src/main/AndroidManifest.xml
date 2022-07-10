@@ -46,6 +46,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
 
         <!-- Helps in supporting double-tap power button (in non-secure/unlocked phone state) -->
@@ -185,6 +188,78 @@
             android:excludeFromRecents="true"
             android:showWhenLocked="true"
             android:exported="false"/>
+
+        <activity
+            android:name=".ui.activities.CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.ScannerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.PortraitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.AutoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.HDRActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.NightActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.FaceRetouchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
 
     </application>
 
