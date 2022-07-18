@@ -34,12 +34,6 @@ android_library_import {
     sdk_version: "current",
 }
 
-android_library_import {
-    name: "androidx.databinding_viewbinding",
-    aars: ["androidx.databinding/viewbinding/viewbinding-*.aar"],
-    sdk_version: "current",
-}
-
 java_import {
     name: "androidx.concurrent_concurrent-futures",
     jars: ["androidx.concurrent/concurrent-futures/concurrent-futures-*.jar"],

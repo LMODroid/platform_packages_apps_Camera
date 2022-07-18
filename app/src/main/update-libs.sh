@@ -29,7 +29,7 @@ function parse_deps() {
         fi
     done < $gradle_file
 
-    local additional_deps=("androidx.concurrent:concurrent-futures:1.0.0 androidx.databinding:viewbinding:7.2.1")
+    local additional_deps=("androidx.concurrent:concurrent-futures:1.0.0")
     local dep=
     for dep in ${additional_deps[@]}; do
         deps+=( $dep )

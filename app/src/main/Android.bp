@@ -25,7 +25,6 @@ android_app {
         "java/**/*.java",
         "java/**/*.kt",
         "java_aosp/**/*.java",
-        "databinding/**/*.java",
     ],
 
     system_ext_specific: true,
@@ -42,7 +41,6 @@ android_app {
         "androidx.documentfile_documentfile",
         "androidx.exifinterface_exifinterface",
         "androidx.lifecycle_lifecycle-livedata",
-        "androidx.databinding_viewbinding",
         "androidx-constraintlayout_constraintlayout",
         "com.google.android.material_material",
         "com.google.zxing_core",
@@ -57,4 +55,9 @@ android_app {
         "--rename-manifest-package",
         "com.libremobileos.camera",
     ],
+    
+    data_binding: {
+        package_name: "app.grapheneos.camera",
+        view_binding: true,
+    }
 }
